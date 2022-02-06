@@ -16,3 +16,8 @@ bgImage.height = 200;
 bgImage.height = 200;
 
 document.body.appendChild(bgImage);
+
+const bgText = document.createElement("h4");
+
+bgText.innerText = `Congrats! You Got ${nameNFT}_#${chosenNumber+1}!`;
+document.body.appendChild(bgText); 

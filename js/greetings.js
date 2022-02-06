@@ -12,11 +12,13 @@ function onLoginSubmit(event) {
     loginForm.classList.add(HIDDEN_CLASSNAME);
     localStorage.setItem(USERNAME_KEY, loginInput.value);
     paintGreetings();
+    navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError); //weather.js
 }
 
 if(savedUsername === null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit);
+
 } else {
    paintGreetings();
 }
